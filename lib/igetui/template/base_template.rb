@@ -48,6 +48,8 @@ module IGeTui
       @push_info.message = message
       @push_info.sound = sound
       @push_info.payload = options[:payload]
+      @push_info.i = options[:i]
+      @push_info.t = options[:t]
       @push_info.locKey = options[:loc_key]
       @push_info.locArgs = options[:loc_args]
       @push_info.launchImage = options[:launch_image]
