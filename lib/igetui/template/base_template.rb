@@ -33,6 +33,20 @@ module IGeTui
       Base64.strict_encode64 string
     end
 
+    def get_apns_push
+      aps = {
+        alert: @push_info.message,
+        sound: @push_info.sound || 'default'
+      }
+
+      apns_msg = JSON.generate({ aps: aps, t: @push_info.t, i: @push_info.i}, :ascii_only => true)
+      string = "X\x00b"
+      string += base_128_encode(apns_msg.size)
+      string += apns_msg.to_s
+
+      Base64.strict_encode64 string
+    end
+
     def get_push_info
       @push_info || init_push_info
     end
