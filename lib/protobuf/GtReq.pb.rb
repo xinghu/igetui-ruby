@@ -294,8 +294,8 @@ module GtReq
     optional :string, :locArgs, 7
     optional :string, :actionLocKey, 8
     optional :string, :launchImage, 9
-    optional :string, :i, 5
-    optional :string, :t, 5
+    optional :string, :i, 10
+    optional :string, :t, 11
   end
 
   class ActionChain < ::ProtocolBuffers::Message
