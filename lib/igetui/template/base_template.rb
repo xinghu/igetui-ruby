@@ -82,5 +82,15 @@ module IGeTui
       @push_info
     end
 
+    def base_128_encode(size)
+      if size < 128
+        string = size.chr.to_s
+      else
+        i = size / 128
+        string = (size-(128*(i-1))).chr
+        string += i.chr
+      end
+    end
+
   end
 end
