@@ -109,6 +109,8 @@ module IGeTui
       h = Hash.new
       h["aps"] = apnsMap
       h["payload"] = args[:payload] if validate_length(nil, args[:payload])
+      h["i"] = args[:i] if validate_length(nil, args[:i])
+      h["t"] = args[:t] if validate_length(nil, args[:t])
 
       return h
     end

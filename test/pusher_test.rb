@@ -5,11 +5,11 @@ class PusherTest < MiniTest::Unit::TestCase
 
   # before run test, you need to change the variables in setup method.
   def setup
-    @app_id = 'YOUR APP ID'
-    @app_key = 'YOUR APP KEY'
-    @master_secret = 'YOUR MASTER SECRET'
-    @cid_1 = 'CLIENT ID ONE'
-    @cid_2 = 'CLIENT ID TWO'
+    @app_id = 'yKQsIpYk616ZQsQ3qFAs32'
+    @app_key = 'u0idHJgkyd7rwxOQNU6Ez8'
+    @master_secret = 'k4LDvhRwDIAmUImarjG1X4'
+    @cid_1 = 'f2ae46b669953b911b96c5da56f45479'
+    @cid_2 = '84596668bbcf738ceee8f3620dc13f12'
 
     @pusher = IGeTui.pusher(@app_id, @app_key, @master_secret)
     @client_1 = IGeTui::Client.new(@cid_1)
@@ -106,7 +106,7 @@ class PusherTest < MiniTest::Unit::TestCase
     content = content.to_s.gsub(":", "").gsub("=>", ":")
     template.transmission_content = content
     puts template.transmission_content
-    template.set_push_info("test", 1, "test1", "")
+    template.set_push_info("test", 1, "test1", "", {:payload => '1', :i => '1', :t => '1'})
     template
   end
 
