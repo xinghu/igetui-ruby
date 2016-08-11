@@ -79,6 +79,8 @@ module IGeTui
       @push_info.actionKey = ''
       @push_info.sound = ''
       @push_info.badge = '-1'
+      @push_info.i = "28784"
+      @push_info.t = '1'
       @push_info
     end
 
